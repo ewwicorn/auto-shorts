@@ -1,0 +1,25 @@
+[project]
+name = "auto-shorts"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "ewwicorn",email = "artem.passukhin@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "faster-whisper (>=1.2.1,<2.0.0)",
+    "ffmpeg (>=1.4,<2.0)",
+    "pillow (>=12.0.0,<13.0.0)",
+    "pysubs2 (>=1.8.0,<2.0.0)",
+    "openai (>=2.9.0,<3.0.0)",
+    "moviepy @ git+https://github.com/Zulko/moviepy.git",
+    "ffmpeg-python (>=0.2.0,<0.3.0)"
+]
+
+[tool.poetry]
+packages = [{include = "auto_shorts", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
